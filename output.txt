@@ -1,0 +1,91 @@
+TASK 2 and TASK 3. Program to print n-th Fibonacci number using recurtion:
+=============code===============
+fibo:
+loadr r0 r14 1
+cmpi r0 1
+jg impl
+lc r1 1
+lc r2 0
+ret 1
+
+impl:
+subi r0 1
+push r0 0
+calli fibo
+add r2 r1 0
+push r0 0
+calli swap_r1_r2
+ret 1
+
+swap_r1_r2:
+mov r0 r1 0
+mov r1 r2 0
+mov r2 r0 0
+ret 1
+
+main:
+syscall r0 100
+push r0 0
+calli fibo
+syscall r1 102
+lc r0 10
+syscall r0 105
+lc r0 0
+syscall r0 0
+end main
+===============================
+print n to calculate: 10
+55
+TASK 1. Program in byte-code to print Hello, world!:
+=============code===============
+201326664
+16777321
+201326693
+16777321
+201326700
+16777321
+201326700
+16777321
+201326703
+16777321
+201326624
+16777321
+201326679
+16777321
+201326703
+16777321
+201326706
+16777321
+201326700
+16777321
+201326692
+16777321
+201326625
+16777321
+===============================
+Hello World!
+TASK 5. Disassemble byte-code to print Hello, world!:
+lc r0, 72
+syscall r0, 105
+lc r0, 101
+syscall r0, 105
+lc r0, 108
+syscall r0, 105
+lc r0, 108
+syscall r0, 105
+lc r0, 111
+syscall r0, 105
+lc r0, 32
+syscall r0, 105
+lc r0, 87
+syscall r0, 105
+lc r0, 111
+syscall r0, 105
+lc r0, 114
+syscall r0, 105
+lc r0, 108
+syscall r0, 105
+lc r0, 100
+syscall r0, 105
+lc r0, 33
+syscall r0, 105
