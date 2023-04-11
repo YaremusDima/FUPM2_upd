@@ -1,0 +1,26 @@
+main:
+    lc r0 72 ;H
+    syscall r0 105
+    lc r0 101 ;e
+    syscall r0 105
+    lc r0 108 ;l
+    syscall r0 105
+    lc r0 108 ;l
+    syscall r0 105
+    lc r0 111 ;o
+    syscall r0 105
+    lc r0 32 ;' '
+    syscall r0 105
+    lc r0 87 ;W
+    syscall r0 105
+    lc r0 111 ;o
+    syscall r0 105
+    lc r0 114 ;r
+    syscall r0 105
+    lc r0 108 ;l
+    syscall r0 105
+    lc r0 100 ;d
+    syscall r0 105
+    lc r0 33 ;!
+    syscall r0 105
+    end main

@@ -1,0 +1,29 @@
+print_letter:
+    syscall r0 105
+    ret 0
+main:
+    lc r0 72 ;H
+    calli print_letter
+    lc r0 101 ;e
+    calli print_letter
+    lc r0 108 ;l
+    calli print_letter
+    lc r0 108 ;l
+    calli print_letter
+    lc r0 111 ;o
+    calli print_letter
+    lc r0 32 ;' '
+    calli print_letter
+    lc r0 87 ;W
+    calli print_letter
+    lc r0 111 ;o
+    calli print_letter
+    lc r0 114 ;r
+    calli print_letter
+    lc r0 108 ;l
+    calli print_letter
+    lc r0 100 ;d
+    calli print_letter
+    lc r0 33 ;!
+    calli print_letter
+    end main

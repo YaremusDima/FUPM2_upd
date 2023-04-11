@@ -1,0 +1,33 @@
+fibo:
+loadr r0 r14 1
+cmpi r0 1
+jg impl
+lc r1 1
+lc r2 0
+ret 1
+
+impl:
+subi r0 1
+push r0 0
+calli fibo
+add r2 r1 0
+push r0 0
+calli swap_r1_r2
+ret 1
+
+swap_r1_r2:
+mov r0 r1 0
+mov r1 r2 0
+mov r2 r0 0
+ret 1
+
+main:
+syscall r0 100
+push r0 0
+calli fibo
+syscall r1 102
+lc r0 10
+syscall r0 105
+lc r0 0
+syscall r0 0
+end main
